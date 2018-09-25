@@ -13,7 +13,7 @@ namespace ClientWebApi
         {
             
             var client = new HttpClient();
-            var result =  client.GetAsync("http://localhost:59280/api/helpdesk/test").Result;
+            var result =  client.GetAsync("http://localhost:59280/api/helpdesk/test").Result; 
             var applications = result.Content.ReadAsAsync<List<string>>().Result;
             foreach (var item in applications)
             {
